@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background-color: #4336D2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    /*********MENU***********/
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3% 10%;
+        background: #222;
+        color: white;
+        position: fixed;
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        z-index: 100;
+    }
+
+    @media (max-width: 768px) {
+        .menu {
+            flex-direction: column; /* Empilha os itens verticalmente */
+            padding: 5% 0px;
+        }
+    }
+    #jt-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+        white-space: nowrap;
+    }
+    @media (max-width: 768px) {
+        #jt-container {
+            display: none;
+        }
+    }
+
+    #jt, #jt.fullName {
+        font-size: 1.8rem;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    #jt {
+        opacity: 1;
+    }
+
+    #jt.fullName {
+        opacity: 0;
+    }
+
+    .menu:hover #jt {
+        opacity: 0;
+    }
+
+    .menu:hover #jt.fullName {
+        opacity: 1;
+    }
+
+
+    .menuLinks {
+        display: flex;
+        gap: 20px;
+        height: auto;
+    }
+
+    .menuLinks a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.8rem; /* Tamanho da fonte para telas maiores */
+        transition: color 0.3s ease, transform 0.3s ease; /* Suaviza a cor e a posição */
+        font-family: "Segoe UI", sans-serif; /* Definindo a fonte como Segoe UI */
+        font-weight: normal; /* Peso da fonte normal */
+    }
+
+    .menuLinks a:hover {
+        color: #00aaff; /* Cor ao passar o mouse */
+        transform: translateY(-3px); /* Move levemente para cima */
+    }
+
+
+    @media (max-width: 768px) {
+        .menuLinks a {
+            font-size: 1.2rem !important;
+        }
+    }
+    /**********Cadastro*************/
+    .login-box {
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 350px;
+    }
+
+    .login-box h2 {
+      margin-bottom: 30px;
+      text-align: center;
+      color: #333;
+    }
+
+    .input-container {
+      position: relative;
+      margin-bottom: 25px;
+    }
+
+    .input-container input {
+      width: 100%;
+      padding: 12px 10px;
+      font-size: 16px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      background: none;
+    }
+
+    .input-container label {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #aaa;
+      pointer-events: none;
+      transition: 0.3s ease all;
+      background: white;
+      padding: 0 5px;
+    }
+
+    .input-container input:focus {
+      border-color: #4336D2;
+    }
+
+    .input-container input:focus + label,
+    .input-container input:not(:placeholder-shown) + label {
+      top: 1px;
+      font-size: 12px;
+      color: #4336D2;
+    }
+
+    .btn-login {
+      width: 100%;
+      padding: 12px;
+      background-color: #4336D2;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn-login:hover {
+      background-color: #372aad;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <!-- MENU -->
+    <nav class="menu">
+
+      <div id="jt-container">
+        <div id="jt">JT</div>
+        <div id="jt" class="fullName">Johnathan Teles</div> 
+      </div>
+    </nav>
+
+  <!-- Cadastro -->
+  <div class="login-box">
+    <h2>Cadastro</h2>
+    <!-- ... mantém tudo igual até a parte do formulário ... -->
+  <form onsubmit="event.preventDefault(); cadastrar();">
+    <div class="input-container">
+      <input type="email" id="email" placeholder=" " required>
+      <label for="email">Email</label>
+    </div>
+    <div class="input-container">
+      <input type="password" id="senha" placeholder=" " required>
+      <label for="senha">Senha</label>
+    </div>
+    <div class="input-container">
+      <input type="password" id="confirmarSenha" placeholder=" " required>
+      <label for="confirmarSenha">Confirmar Senha</label>
+    </div>
+    <button type="submit" class="btn-login">Cadastrar</button>
+  </form>
+
+    <div class="footer">
+      <p>Já tem uma conta? <a href="login.html" style="color:#4336D2;">Entrar</a></p>
+    </div>
+  </div>
+
+<script>
+  function cadastrar() {
+    const email = document.getElementById("email").value;
+    const senha = document.getElementById("senha").value;
+    const confirmarSenha = document.getElementById("confirmarSenha").value;
+
+    if (senha !== confirmarSenha) {
+      alert("As senhas não coincidem!");
+      return;
+    }
+
+    let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+    const existe = usuarios.some(usuario => usuario.email === email);
+
+    if (existe) {
+      alert("Este e-mail já está cadastrado!");
+      return;
+    }
+
+    usuarios.push({ email, senha });
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+    alert("Cadastro realizado com sucesso!");
+    window.location.href = "login.html";
+  }
+</script>
+
+
+</body>
+</html>

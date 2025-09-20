@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfólio - Johnathan Teles</title>
+        <link rel="stylesheet" href="estilo.css">
+        <script src="script.js"> </script>
+
+    </head>
+    <body>
+
+
+        <!-- MENU -->
+        <nav class="menu">
+
+            <div id="jt-container">
+                <div id="jt">JT</div>
+                <div id="jt" class="fullName">Johnathan Teles</div> 
+            </div>
+
+            <div class="menuLinks">
+                <a href="#home" onclick="homeSelecionado(event)">Home</a>
+                <a href="#sobre" onclick="sobreSelecionado(event)">Sobre</a>
+                <a href="#skills" onclick="skillsSelecionado(event)">Skills</a>
+                <a href="#portfolio" onclick="portfolioSelecionado(event)">Projetos</a>
+                <a href="#contato" onclick="contatoSelecionado(event)">Contato</a>
+            </div>
+            
+            <div>
+                <a href="login.html" class="btn-login">Login</a>
+            </div>
+        </nav>
+
+
+
+        <!-- APRESENTAÇÃO -->
+        <section class="apresentacao" id="home">
+            <div id="conteudo-apresentacao">
+                <div id="texto-apresentacao">
+                    <h1 id="dev1">Olá, sou Johnathan Teles</h1>
+                    <h2 id="dev2">Desenvolvedor Web</h2>
+                    <button class="botao" onclick="redirectToWhatsApp(event)" title="Clique para me contatar no WhatsApp">Contate me</button>
+
+                    <div class="icon_inicio">                                          
+                        <a href="https://github.com/JohnathanTeles" target="_blank">
+                            <img src="imagem/img-linguagens/github.png" alt="GitHub" class="icon" title="Acesse meu GitHub"/>
+                        </a>
+                        <a href="https://www.linkedin.com/in/johnathanteles/" target="_blank">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-plain.svg" alt="LinkedIn" class="icon" title="Acesse meu LinkedIn"/>
+                        </a>
+                    </div>
+
+
+                    
+                </div>
+                    <div class="pontos1 transicao"></div>
+                    <div class="pontos2 transicao"></div>
+
+                <div id="imagem-apresentacao" class="transicao" ></div>
+            </div  >
+        </section>
+
+        <!-- CONTAINER GERAL -->
+        <section class="container" id="sobre" >
+            <h2 class="tituloCentral" >Sobre Mim</h2>
+            <div class="sobreTexto">
+                <p >
+                      Sou apaixonado por tecnologia e estou sempre em busca de aprender mais e me superar a cada projeto. Tenho experiência com linguagens e ferramentas como PHP, HTML, CSS, JavaScript, PostgreSQL, Git e GitHub, que utilizo no desenvolvimento de projetos acadêmicos e pessoais, focados em criar soluções práticas e funcionais.
+                </p>
+                <p>
+                    Atualmente, estou em constante evolução, me dedicando ao aprimoramento técnico e ao desenvolvimento de habilidades que me preparem para os desafios do mercado. Meu objetivo é me tornar um desenvolvedor completo, capaz de entregar resultados com excelência e criatividade na área de Tecnologia da Informação.
+                </p>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="container" id="skills">
+            <h2 class="tituloCentral">Minhas Skills</h2>
+            <div class="classSkills">
+                <div>
+                    <img src="imagem/img-linguagens/js.png" title="JavaScript - Linguagem de programação para web interativa">
+                    <p>JavaScript</p>
+                </div>
+                <div>
+                    <img src="imagem/img-linguagens/html.png" title="HTML5 - Linguagem de marcação para a web">
+                    <p>HTML</p>
+                </div>
+                <div>
+                    <img src="imagem/img-linguagens/PHP.png" title="PHP - Linguagem de programação para desenvolvimento web backend">
+                    <p>PHP</p>
+                </div>
+                
+                <div>
+                    <img src="imagem/img-linguagens/git.png" title="Git - Sistema de controle de versão distribuído">
+                    <p>Git</p>
+                </div>
+                <div>
+                    <img src="imagem/img-linguagens/github.png"title="GitHub - Plataforma para hospedagem de código com Git">
+                    <p>Github</p>
+                </div>
+                <div>
+                    <img src="imagem/img-linguagens/css3.png" title="CSS3 - Estilização de páginas web">
+                    <p>CSS</p>
+                </div>
+                
+                <div>
+                    <img src="imagem/img-linguagens/postgres.png"title="PostgreSQL - Sistema de gerenciamento de banco de dados relacional">
+                    <p>PostgreSQL</p>
+                </div>
+
+                
+            </div>
+        </section>
+
+        <!-- PORTFÓLIO -->
+        <section class="container" id="portfolio">
+            <h2 class="tituloCentral">Projetos</h2>
+
+            <div class="card">
+                <h3>Site do Casal</h3>
+                <div class="imagem-container">
+                    
+                    <meu-carrossel>
+                        <img src="imagem/img-projetos/sitedocasal/index.png">
+                        <img src="imagem/img-projetos/sitedocasal/form.png">
+                        <img src="imagem/img-projetos/sitedocasal/pag.png">
+                        <img src="imagem/img-projetos/sitedocasal/admin.png">
+                        <img src="imagem/img-projetos/sitedocasal/casal.png">
+                        <img src="imagem/img-projetos/sitedocasal/casal2.png">
+                    </meu-carrossel>
+                </div>
+                <div class="containerProjeto">
+                    <div class="title-container">
+                        <div class="icons">
+                            <img src="imagem/img-linguagens/html.png" title="HTML5 - Linguagem de marcação para a web">
+                            <img src="imagem/img-linguagens/css3.png" title="CSS3 - Estilização de páginas web">
+                            <img src="imagem/img-linguagens/Bootstrap.png" title="bootstrap - Estilização de páginas web">
+                            <img src="imagem/img-linguagens/PHP.png" title="PHP - Linguagem de programação para desenvolvimento web backend">                            
+
+                        </div>
+                    </div>
+                    <p> O site permite que casais criem uma página personalizada com fotos, declaração, música e a data do relacionamento. A página exibe um carrossel de fotos, um cronômetro com o tempo juntos e uma ambientação romântica. Os dados são salvos localmente e o acesso à página é liberado após aprovação manual do pagamento via Pix.</p>
+                    <div class="buttons">
+                        <button class="view-project" onclick="window.open('https://sitedocasal.free.nf/', '_blank')">
+                            Ver Projeto
+                            </button>
+                        <button class="repository" onclick="window.open('https://github.com/JohnathanTeles/SiteDoCasal')">Repositório</button>
+                    </div>
+                </div>
+            </div>
+
+            <section class="container">
+            <div class="card">
+                <h3>Help Desk</h3>
+                <div class="imagem-container">
+                    
+                    <meu-carrossel>
+                        <img src="imagem/img-projetos/helpdesk/helpdesk.png">
+                        <img src="imagem/img-projetos/helpdesk/abrirchamado.png">
+                        <img src="imagem/img-projetos/helpdesk/verchamado.png">
+                        <img src="imagem/img-projetos/helpdesk/helplogin.png">
+
+                    </meu-carrossel>
+                </div>
+                <div class="containerProjeto">
+                    <div class="title-container">
+                        <div class="icons">
+                            <img src="imagem/img-linguagens/html.png" title="HTML5 - Linguagem de marcação para a web">
+                            <img src="imagem/img-linguagens/css3.png" title="CSS3 - Estilização de páginas web">
+                            <img src="imagem/img-linguagens/PHP.png" title="PHP - Linguagem de programação para desenvolvimento web backend">                            
+
+                        </div>
+                    </div>
+                    <p> O sistema tem como objetivo permitir que os usuários registrem chamados referentes a problemas técnicos, como falhas de hardware ou software. Cada chamado é visível apenas para o usuário que o criou, com exceção do administrador, que possui acesso a todos os chamados.</p>
+                    <div class="buttons">
+                        <button class="view-project" onclick="window.open('https://johnathanteles.github.io/Help-Desk/', '_blank')">
+                            Ver Projeto
+                            </button>
+                        <button class="repository" onclick="window.open('https://github.com/JohnathanTeles/Help-Desk')">Repositório</button>
+                    </div>
+                </div>
+            </div>
+            </section>
+
+            <div class="card">
+                <h3>Life Clock</h3>
+                <div class="imagem-container">
+
+                    <meu-carrossel>
+                        <img src="imagem/img-projetos/lifeclock/lifeclock.png">
+                        <img src="imagem/img-projetos/lifeclock/data.png">
+                        <img src="imagem/img-projetos/lifeclock/resultado.png">
+                    </meu-carrossel>
+
+                </div>
+                <div class="containerProjeto">
+                    <div class="title-container">
+                        <div class="icons">
+                            <img src="imagem/img-linguagens/html.png" title="HTML5 - Linguagem de marcação para a web">
+                            <img src="imagem/img-linguagens/css3.png" title="CSS3 - Estilização de páginas web">
+                            <img src="imagem/img-linguagens/js.png" title="JavaScript - Linguagem de programação para web interativa">                            
+
+                        </div>
+                    </div>
+                    <p>O LifeClock é uma ferramenta simples e interativa que permite calcular a idade de uma pessoa a partir da sua data de nascimento. Além de exibir a idade em anos, meses e dias, também fornece informações sobre o total de dias, horas, minutos e milissegundos vividos até o momento. A interface é intuitiva e fácil de usar, proporcionando uma experiência prática e eficiente aos usuários.</p>
+                    <div class="buttons">
+                        <button class="view-project" onclick="window.open('https://johnathanteles.github.io/LifeClock/', '_blank')">
+                              Ver Projeto
+                        </button>
+                        <button class="repository" onclick="window.open('https://github.com/JohnathanTeles/LifeClock')">Repositório</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            <div class="card">
+                <h3>Game Shop</h3>
+                <div class="imagem-container">
+                    <meu-carrossel>
+                        <img src="imagem/img-projetos/lojadegames/lojadegames.png">
+                        <img src="imagem/img-projetos/lojadegames/carrinhodecompras.png">
+                        <img src="imagem/img-projetos/lojadegames/pagamento.png">
+                        <img src="imagem/img-projetos/lojadegames/login.png">
+                        <img src="imagem/img-projetos/lojadegames/cadastre-se.png">
+
+                    </meu-carrossel>                
+                </div>
+                <div class="containerProjeto">
+                    <div class="title-container">
+                        <div class="icons">
+                            <img src="imagem/img-linguagens/html.png" title="HTML5 - Linguagem de marcação para a web">
+                            <img src="imagem/img-linguagens/css3.png" title="CSS3 - Estilização de páginas web">
+                            <img src="imagem/img-linguagens/js.png" title="JavaScript - Linguagem de programação para web interativa">                           
+                            <img src="imagem/img-linguagens/jquery.png" title="jQuery - Biblioteca JavaScript para facilitar manipulações DOM e eventos">
+
+                        </div>
+                    </div>
+                    <p>Trata-se de uma loja de jogos online que permite aos usuários explorar um catálogo de produtos, adicionar itens ao carrinho, modificar quantidades, remover produtos e concluir a compra de maneira intuitiva. O sistema também inclui funcionalidades de cadastro e autenticação de usuários. </p>
+                    <div class="buttons">
+                        <button class="view-project" onclick="window.open('https://johnathanteles.github.io/Loja-De-Games/', '_blank')">
+                            Ver Projeto
+                            </button>
+                        <button class="repository" onclick="window.open('https://github.com/JohnathanTeles/Loja-De-Games')">Repositório</button>
+                    </div>
+                </div>
+            </div>
+
+        <section class="containerContato" id="contato">
+            <h2 class="tituloContato">Contato</h2>
+
+            <div class="conteudoContato">
+
+                <div class="contato-info">
+                    <div id="imagem-linkedin"></div>
+                    <a href="https://www.linkedin.com/in/johnathanteles" class="linkedin-texto">Meu LinkedIn</a>
+                </div>
+
+                <div class="contato-info">
+                     <div id="imagem-contato" ></div>
+                     <a href="#" onclick="redirectToWhatsApp(event)" class="telefone-texto">(62) 99555-2510</a>
+                 </div>
+
+                <div class="contato-info">
+                    <div id="imagem-email"></div>
+                    <a href="mailto:telesjohnathan@gmail.com" class="email-texto">telesjohnathan@gmail.com</a>
+                </div>
+
+
+
+            </div>
+        </section>
+        <script type="module" src="./webcomponent/carrossel.js"></script>
+
+    </body>
+</html>
